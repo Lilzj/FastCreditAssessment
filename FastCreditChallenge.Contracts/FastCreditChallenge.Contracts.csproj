@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\FastCreditChallenge.Entities\FastCreditChallenge.Entities.csproj" />
+    <ProjectReference Include="..\FastCreditChallenge.Utilities\FastCreditChallenge.Utilities.csproj" />
   </ItemGroup>
 
 </Project>

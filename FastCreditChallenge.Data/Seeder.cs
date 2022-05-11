@@ -14,8 +14,10 @@ namespace FastCreditChallenge.Data
 {
     public class Seeder
     {
-        private static string path = Path.GetFullPath(@"../WemaAssessment.Persistence/Data/");
+        private static string path = Path.GetFullPath(@"../FastCreditChallenge.Data/Data.Json/");
+
         private const string adminPassword = "Secret@123";
+        private const string userPassword = "P@ssw0rd";
 
         public static async Task EnsurePopulated(IApplicationBuilder app)
         {
@@ -36,15 +38,39 @@ namespace FastCreditChallenge.Data
                 var userManager = app.ApplicationServices.CreateScope()
                                               .ServiceProvider.GetRequiredService<UserManager<User>>();
 
-                //Seed Users
-                var customers = GetSampleData<User>(File.ReadAllText(path + "customers.json"));
+                var roleManager = app.ApplicationServices.CreateScope()
+                                              .ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
 
-                foreach (var customer in customers)
+                //create role if it doesn't exists
+                var roles = new string[] { "Admin", "Customer" };
+                foreach (var role in roles)
                 {
-                    customer.UserName = customer.Email;
-                    await userManager.CreateAsync(customer);
-                    var token = await userManager.GenerateChangePhoneNumberTokenAsync(customer, customer.PhoneNumber);
-                    await userManager.ChangePhoneNumberAsync(customer, customer.PhoneNumber, token);
+                    var roleExist = await roleManager.RoleExistsAsync(role);
+                    if (!roleExist)
+                    {
+                        await roleManager.CreateAsync(new IdentityRole(role));
+                    }
+                }
+
+                //Seed Users with one Admin
+                var Users = GetSampleData<User>(File.ReadAllText(path + "User.json"));
+
+                var (adminCount, userCount) = (0, 0);
+
+                foreach (var user in Users)
+                {
+                   if(adminCount < 1)
+                    {
+                        await userManager.CreateAsync(user, adminPassword);
+                        await userManager.AddToRoleAsync(user, roles[0]);
+                        ++adminCount;
+                    }
+                   else
+                    {
+                        await userManager.CreateAsync(user, userPassword);
+                        await userManager.AddToRoleAsync(user, roles[1]);
+                        ++userCount;
+                    }
                 }
 
                 await context.SaveChangesAsync();
