@@ -80,3 +80,4 @@ C:\Users\lilzj\source\repos\FastCreditChallenge\FastCreditChallenge\obj\Debug\ne
 C:\Users\lilzj\source\repos\FastCreditChallenge\FastCreditChallenge\obj\Debug\net6.0\FastCreditChallenge.genruntimeconfig.cache
 C:\Users\lilzj\source\repos\FastCreditChallenge\FastCreditChallenge\bin\Debug\net6.0\Humanizer.dll
 C:\Users\lilzj\source\repos\FastCreditChallenge\FastCreditChallenge\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\lilzj\source\repos\FastCreditChallenge\FastCreditChallenge\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

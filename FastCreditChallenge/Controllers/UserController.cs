@@ -79,7 +79,7 @@ namespace FastCreditChallenge.Controllers
             return await _userService.DeleteUserAsync(id);
         }
 
-        [HttpGet("{id)", Name = nameof(GetUserById))]
+        [HttpGet("{id}", Name = nameof(GetUserById))]
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> GetUserById([FromRoute] string id)
         {
@@ -106,16 +106,6 @@ namespace FastCreditChallenge.Controllers
                 return ServiceResponse.BadRequest("No name entered");
             }
             return await _userService.Search(name);
-        }
-
-        [HttpPost]
-        [Route("Logout")]
-        public async Task<IActionResult> Logout()
-        {
-            await _signInManager.SignOutAsync();
-            HttpContext.Session.Clear();
-            return Ok();
-
         }
     }
 }
