@@ -47,6 +47,7 @@ namespace FastCreditChallenge.Core.Services
             var user = _mapper.Map<User>(model);
 
             user.Photo = imageUrl.ImageUrl;
+            user.UserName = user.Email;
             var result = await _userManager.CreateAsync(user, model.Password);
 
             if (result.Succeeded)

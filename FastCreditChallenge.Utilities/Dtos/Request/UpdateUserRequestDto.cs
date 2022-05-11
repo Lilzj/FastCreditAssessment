@@ -24,7 +24,5 @@ namespace FastCreditChallenge.Utilities.Dtos.Request
         public DateTime DOB { get; set; }
         [Required]
         public string Nationality { get; set; }
-        [Required]
-        public IFormFile Photo { get; set; }
     }
 }

@@ -15,7 +15,7 @@ namespace FastCreditChallenge.Utilities.Dtos.Response
         public string Email { get; set; }
         public DateTime DOB { get; set; }
         public string Nationality { get; set; }
-        public string PhotoUrl { get; set; }
+        public string Photo { get; set; }
         public DateTime DateCreated { get; set; }
         public DateTime DateModified { get; set; }
     }
