@@ -1,6 +1,7 @@
 using FastCreditChallenge.Contracts.Services;
 using FastCreditChallenge.Core.Services;
 using FastCreditChallenge.Data;
+using FastCreditChallenge.Data.Settings;
 using FastCreditChallenge.Entities;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
@@ -19,8 +20,11 @@ builder.Services.AddIdentity<User, IdentityRole>()
     .AddEntityFrameworkStores<FastCreditContext>().AddDefaultTokenProviders();
 builder.Services.AddDbContextPool<FastCreditContext>(opt =>
     opt.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.Configure<JWTData>(builder.Configuration.GetSection(JWTData.Data));
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IFIleUploadService, FileUploadService>();
+builder.Services.Configure<CloudinaryConfig>(builder.Configuration.GetSection("CloudinarySettings"));
 builder.Services.AddCors(options => {
     options.AddPolicy("CorsPolicy", builder =>
         builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader()
