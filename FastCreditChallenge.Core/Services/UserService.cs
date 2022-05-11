@@ -1,43 +1,160 @@
-﻿using FastCreditChallenge.Contracts.Services;
+﻿using AutoMapper;
+using FastCreditChallenge.Contracts.Services;
+using FastCreditChallenge.Core.Security;
+using FastCreditChallenge.Data.Settings;
+using FastCreditChallenge.Entities;
+using FastCreditChallenge.Utilities;
+using FastCreditChallenge.Utilities.Dtos.Request;
+using FastCreditChallenge.Utilities.Dtos.Response;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 
 namespace FastCreditChallenge.Core.Services
 {
     public class UserService : IUserService
     {
-        public Task<ObjectResult> AddCustomerAsync(CustomerToAddDto model)
+        private readonly UserManager<User> _userManager;
+        private readonly SignInManager<User> _signInManager;
+        private readonly RoleManager<IdentityRole> _roleManager;
+        private readonly IOptions<JWTData> _JWTData;
+        private readonly IMapper _mapper;
+
+        public UserService(IMapper mapper, UserManager<User> userManager,
+                              SignInManager<User> signInManager, RoleManager<IdentityRole> roleManager, IOptions<JWTData> JWTData)
         {
-            throw new NotImplementedException();
+            _mapper = mapper;
+            _userManager = userManager;
+            _signInManager = signInManager;
+            _roleManager = roleManager;
+            _JWTData = JWTData;
         }
 
-        public Task<IActionResult> DeleteCustomerAsync(long customerId)
+        public async Task<ObjectResult> AddUserAsync(AddUserRequestDto model)
         {
-            throw new NotImplementedException();
+            //check if user already exist
+            if (await _userManager.FindByEmailAsync(model.Email) != null)
+                return ServiceResponse.BadRequest("Email already exists");
+
+            var user = _mapper.Map<User>(model);
+
+            var result = await _userManager.CreateAsync(user, model.Password);
+
+            if (result.Succeeded)
+            {
+                //Check if role exists and create if not
+                var role = await _roleManager.FindByNameAsync("Customer");
+                if (role == null)
+                    await _roleManager.CreateAsync(new IdentityRole("Customer"));
+
+                await _userManager.AddToRoleAsync(user, role.Name);
+
+                var userToReturn = _mapper.Map<UserResponse>(user);
+
+                return ServiceResponse.Created("GetUserById", new { id = userToReturn.Id }, userToReturn);
+            }
+            else
+            {
+                return ServiceResponse.BadRequest("Error in creating new user");
+            }
+
+
         }
 
-        public Task<ObjectResult> GetCustomersAsync()
+        public async Task<ObjectResult> Login(LoginRequestDto model)
         {
-            throw new NotImplementedException();
+            //Get user from Database
+            var user = await _userManager.FindByEmailAsync(model.Email);
+
+            if (user == null)
+                return ServiceResponse.NotFound("User Not Found");
+
+            //signin user
+            var result = await _signInManager.PasswordSignInAsync(user, model.Password, false, false);
+
+            if (!result.Succeeded)
+            {
+                return ServiceResponse.BadRequest("invalid credentials");
+            }
+
+            try
+            {
+                //Get user roles
+                var roles = await _userManager.GetRolesAsync(user);
+                var token = JWTService.GenerateToken(user, roles, _JWTData);//Generate token
+
+                var userToReturn = new LoginResponseDto
+                {
+                    UserId = user.Id,
+                    Role = string.Join(",", await _userManager.GetRolesAsync(user)),
+                    Token = token.ToString()
+                };
+
+                return ServiceResponse.Ok(userToReturn);
+            }
+            catch (Exception)
+            {
+                throw new Exception("Something went wrong generating token");
+            }
         }
 
-        public Task<ObjectResult> GetCustomersByName(string name)
+        public async Task<ObjectResult> GetUserAsync(string userId)
         {
-            throw new NotImplementedException();
+            var user = await _userManager.FindByIdAsync(userId);
+
+            if (user == null)
+                return ServiceResponse.NotFound($"User with {userId} not found");
+
+            var response = _mapper.Map<UserResponse>(user);
+
+            return ServiceResponse.Ok(response);
         }
 
-        public Task<ObjectResult> GetCustomerWIthOrdersAsync(long customerId)
+        public async Task<IActionResult> UpdateUserAsync(string id, UpdateUserRequestDto model)
         {
-            throw new NotImplementedException();
+            var user = await _userManager.FindByIdAsync(id);
+
+            if (user == null)
+                return ServiceResponse.NotFound("User was not found");
+
+            var res = _mapper.Map(model, user);
+
+            var result = await _userManager.UpdateAsync(res);
+
+            return ServiceResponse.Ok("Updated successfully");
         }
 
-        public Task<IActionResult> UpdateCustomerAsync(long customerId, CustomerToUpdateDto model)
+        public async Task<IActionResult> DeleteUserAsync(string userId)
         {
-            throw new NotImplementedException();
+            var user = await _userManager.FindByIdAsync(userId);
+            if (user == null)
+                return ServiceResponse.NotFound("User not found");
+
+            await _userManager.DeleteAsync(user);
+
+            return ServiceResponse.NoContent();
+        }
+
+        public async Task<ObjectResult> GetUsersAsync()
+        {
+            var users = _userManager.Users;
+            if (users == null)
+                return ServiceResponse.NotFound("No user in the database");
+
+            var usersToReturn = _mapper.Map<IEnumerable<UserResponse>>(users);
+
+            return ServiceResponse.Ok(usersToReturn);
+        }
+
+        public async Task<ObjectResult> Search(string name)
+        {
+            var users = await _userManager.Users.Where(x => x.FirstName == name).ToListAsync();
+            if (users == null)
+                return ServiceResponse.NotFound("No users in the database");
+
+            var usersToReturn = _mapper.Map<IEnumerable<UserResponse>>(users);
+            return ServiceResponse.Ok(usersToReturn);
         }
     }
 }

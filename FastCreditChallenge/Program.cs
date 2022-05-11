@@ -41,6 +41,9 @@ app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
+//Seed the database with some users and the state with lga
+Seeder.EnsurePopulated(app).Wait();
+
 app.MapControllers();
 
 app.Run();

@@ -3,28 +3,34 @@
   {
     "FirstName": "Joshua",
     "LastName": "Rice",
+    "UserName": "josh@gmail.com",
     "Gender": 1,
-    "DOB": "1990/01/01",
+    "DOB": "1990-01-01",
     "Nationality": "Nigeria",
+    "Photo": "https://picsum.photos/200/300",
     "email": "josh@gmail.com",
-    "phonenumber": "0(811) 403-2216"
+    "phonenumber": "+234 403-2216"
   },
   {
     "FirstName": "Femi",
     "LastName": "John",
+    "UserName": "femi@gmail.com",
     "Gender": 0,
-    "DOB": "1991/01/01",
+    "DOB": "1991-01-01",
     "Nationality": "Nigeria",
+    "Photo": "https://picsum.photos/200/300",
     "email": "femi@gmail.com",
-    "phonenumber": "0(811) 403-2216"
+    "phonenumber": "234 403-2216"
   },
   {
     "FirstName": "Sam",
     "LastName": "Phillip",
+    "UserName": "sam@gmail.com",
     "Gender": 1,
-    "DOB": "1992/01/01",
+    "DOB": "1992-01-01",
     "Nationality": "Nigeria",
+    "Photo": "https://picsum.photos/200/300",
     "email": "sam@gmail.com",
-    "phonenumber": "0(811) 403-2216"
+    "phonenumber": "234 403-2216"
   }
 ]

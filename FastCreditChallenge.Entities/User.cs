@@ -17,7 +17,7 @@ namespace FastCreditChallenge.Entities
         public byte Gender { get; set; }
         public DateTime DOB { get; set; }
         public string Nationality { get; set; }
-        public IFormFile Photo { get; set; }
+        public string Photo { get; set; }
         public DateTime DateCreated { get; set; } = DateTime.Now;
         public DateTime DateModified { get; set; } = DateTime.Now;
 

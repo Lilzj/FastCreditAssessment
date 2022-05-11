@@ -10,11 +10,12 @@ namespace FastCreditChallenge.Contracts.Services
 {
     public interface IUserService
     {
-        Task<ObjectResult> GetCustomersAsync();
-        Task<ObjectResult> AddCustomerAsync(AddUserRequestDto model);
-        Task<ObjectResult> GetCustomerWIthOrdersAsync(long customerId);
-        Task<IActionResult> UpdateCustomerAsync(long customerId, UpdateUserRequestDto model);
-        Task<IActionResult> DeleteCustomerAsync(long customerId);
-        Task<ObjectResult> GetCustomersByName(string name);
+        Task<ObjectResult> GetUsersAsync();
+        Task<ObjectResult> AddUserAsync(AddUserRequestDto model);
+        Task<ObjectResult> Login(LoginRequestDto model);
+        Task<ObjectResult> GetUserAsync(string userId);
+        Task<IActionResult> UpdateUserAsync(string id, UpdateUserRequestDto model);
+        Task<IActionResult> DeleteUserAsync(string Id);
+        Task<ObjectResult> Search(string name);
     }
 }
