@@ -5,7 +5,47 @@
       "ProjectGuid": "3e512c7a-4447-47f7-b3dc-184b0aa8cb63",
       "DisplayName": "FastCreditChallenge",
       "ColorIndex": 0
+    },
+    "1863fa1d-f5d4-4664-834f-94d4597b9a05": {
+      "ProjectGuid": "1863fa1d-f5d4-4664-834f-94d4597b9a05",
+      "DisplayName": "FastCreditChallenge.Contracts",
+      "ColorIndex": 1
+    },
+    "f957313c-74c5-4d05-8e56-42fae3986bd2": {
+      "ProjectGuid": "f957313c-74c5-4d05-8e56-42fae3986bd2",
+      "DisplayName": "FastCreditChallenge.Entities",
+      "ColorIndex": 2
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "7752740b-e29e-4f83-8b9a-00b2ae658c37": {
+      "ProjectGuid": "7752740b-e29e-4f83-8b9a-00b2ae658c37",
+      "DisplayName": "FastCreditChallenge.Utilities",
+      "ColorIndex": 3
+    },
+    "d9682c59-a601-40c8-b050-32e43ee39a8f": {
+      "ProjectGuid": "d9682c59-a601-40c8-b050-32e43ee39a8f",
+      "DisplayName": "FastCreditChallenge.Core",
+      "ColorIndex": 4
+    },
+    "a8d750de-f750-4e66-b04c-84f24b0fcbcf": {
+      "ProjectGuid": "a8d750de-f750-4e66-b04c-84f24b0fcbcf",
+      "DisplayName": "FastCreditChallenge.Data",
+      "ColorIndex": 5
+    },
+    "6c88a799-7bf0-4e8c-a2a8-63fd2be441c0": {
+      "ProjectGuid": "6c88a799-7bf0-4e8c-a2a8-63fd2be441c0",
+      "DisplayName": "FastCreditChallenge.Test",
+      "ColorIndex": 6
+    },
+    "120e206e-1201-4579-8226-6635a9bbdab3": {
+      "ProjectGuid": "120e206e-1201-4579-8226-6635a9bbdab3",
+      "DisplayName": "Solution Items",
+      "ColorIndex": 7
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 8
 }

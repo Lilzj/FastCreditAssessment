@@ -1,0 +1,15 @@
+C:\Users\lilzj\source\repos\FastCreditChallenge\FastCreditChallenge.Utilities\bin\Release\net6.0\FastCreditChallenge.Utilities.deps.json
+C:\Users\lilzj\source\repos\FastCreditChallenge\FastCreditChallenge.Utilities\bin\Release\net6.0\FastCreditChallenge.Utilities.dll
+C:\Users\lilzj\source\repos\FastCreditChallenge\FastCreditChallenge.Utilities\bin\Release\net6.0\ref\FastCreditChallenge.Utilities.dll
+C:\Users\lilzj\source\repos\FastCreditChallenge\FastCreditChallenge.Utilities\bin\Release\net6.0\FastCreditChallenge.Utilities.pdb
+C:\Users\lilzj\source\repos\FastCreditChallenge\FastCreditChallenge.Utilities\bin\Release\net6.0\FastCreditChallenge.Entities.dll
+C:\Users\lilzj\source\repos\FastCreditChallenge\FastCreditChallenge.Utilities\bin\Release\net6.0\FastCreditChallenge.Entities.pdb
+C:\Users\lilzj\source\repos\FastCreditChallenge\FastCreditChallenge.Utilities\obj\Release\net6.0\FastCreditChallenge.Utilities.csproj.AssemblyReference.cache
+C:\Users\lilzj\source\repos\FastCreditChallenge\FastCreditChallenge.Utilities\obj\Release\net6.0\FastCreditChallenge.Utilities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lilzj\source\repos\FastCreditChallenge\FastCreditChallenge.Utilities\obj\Release\net6.0\FastCreditChallenge.Utilities.AssemblyInfoInputs.cache
+C:\Users\lilzj\source\repos\FastCreditChallenge\FastCreditChallenge.Utilities\obj\Release\net6.0\FastCreditChallenge.Utilities.AssemblyInfo.cs
+C:\Users\lilzj\source\repos\FastCreditChallenge\FastCreditChallenge.Utilities\obj\Release\net6.0\FastCreditChallenge.Utilities.csproj.CoreCompileInputs.cache
+C:\Users\lilzj\source\repos\FastCreditChallenge\FastCreditChallenge.Utilities\obj\Release\net6.0\FastCreditChallenge.Utilities.csproj.CopyComplete
+C:\Users\lilzj\source\repos\FastCreditChallenge\FastCreditChallenge.Utilities\obj\Release\net6.0\FastCreditChallenge.Utilities.dll
+C:\Users\lilzj\source\repos\FastCreditChallenge\FastCreditChallenge.Utilities\obj\Release\net6.0\ref\FastCreditChallenge.Utilities.dll
+C:\Users\lilzj\source\repos\FastCreditChallenge\FastCreditChallenge.Utilities\obj\Release\net6.0\FastCreditChallenge.Utilities.pdb

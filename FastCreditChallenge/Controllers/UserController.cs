@@ -33,7 +33,7 @@ namespace FastCreditChallenge.Controllers
 
         [HttpPost("register")]
         [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> AddUser(AddUserRequestDto model)
+        public async Task<IActionResult> AddUser([FromForm]AddUserRequestDto model)
         {
             if (!ModelState.IsValid)
                 return ServiceResponse.BadRequest(ModelState);
@@ -52,7 +52,7 @@ namespace FastCreditChallenge.Controllers
 
         [HttpPut("{id}")]
         [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> UpdateUserAsync([FromRoute]string id, UpdateUserRequestDto model)
+        public async Task<IActionResult> UpdateUserAsync([FromRoute]string id, [FromForm]UpdateUserRequestDto model)
         {
             if (string.IsNullOrWhiteSpace(id))
             {

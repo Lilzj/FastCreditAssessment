@@ -5,17 +5,17 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FastCreditChallenge", "FastCreditChallenge\FastCreditChallenge.csproj", "{3E512C7A-4447-47F7-B3DC-184B0AA8CB63}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastCreditChallenge.Contracts", "FastCreditChallenge.Contracts\FastCreditChallenge.Contracts.csproj", "{1863FA1D-F5D4-4664-834F-94D4597B9A05}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FastCreditChallenge.Contracts", "FastCreditChallenge.Contracts\FastCreditChallenge.Contracts.csproj", "{1863FA1D-F5D4-4664-834F-94D4597B9A05}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastCreditChallenge.Entities", "FastCreditChallenge.Entities\FastCreditChallenge.Entities.csproj", "{F957313C-74C5-4D05-8E56-42FAE3986BD2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FastCreditChallenge.Entities", "FastCreditChallenge.Entities\FastCreditChallenge.Entities.csproj", "{F957313C-74C5-4D05-8E56-42FAE3986BD2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastCreditChallenge.Utilities", "FastCreditChallenge.Utilities\FastCreditChallenge.Utilities.csproj", "{7752740B-E29E-4F83-8B9A-00B2AE658C37}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FastCreditChallenge.Utilities", "FastCreditChallenge.Utilities\FastCreditChallenge.Utilities.csproj", "{7752740B-E29E-4F83-8B9A-00B2AE658C37}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastCreditChallenge.Core", "FastCreditChallenge.Core\FastCreditChallenge.Core.csproj", "{D9682C59-A601-40C8-B050-32E43EE39A8F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FastCreditChallenge.Core", "FastCreditChallenge.Core\FastCreditChallenge.Core.csproj", "{D9682C59-A601-40C8-B050-32E43EE39A8F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastCreditChallenge.Data", "FastCreditChallenge.Data\FastCreditChallenge.Data.csproj", "{A8D750DE-F750-4E66-B04C-84F24B0FCBCF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FastCreditChallenge.Data", "FastCreditChallenge.Data\FastCreditChallenge.Data.csproj", "{A8D750DE-F750-4E66-B04C-84F24B0FCBCF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastCreditChallenge.Test", "FastCreditChallenge.Test\FastCreditChallenge.Test.csproj", "{6C88A799-7BF0-4E8C-A2A8-63FD2BE441C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FastCreditChallenge.Test", "FastCreditChallenge.Test\FastCreditChallenge.Test.csproj", "{6C88A799-7BF0-4E8C-A2A8-63FD2BE441C0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

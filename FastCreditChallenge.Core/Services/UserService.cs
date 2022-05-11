@@ -20,15 +20,17 @@ namespace FastCreditChallenge.Core.Services
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly IOptions<JWTData> _JWTData;
         private readonly IMapper _mapper;
+        private readonly IFIleUploadService _fileUpload;
 
         public UserService(IMapper mapper, UserManager<User> userManager,
-                              SignInManager<User> signInManager, RoleManager<IdentityRole> roleManager, IOptions<JWTData> JWTData)
+                              SignInManager<User> signInManager, RoleManager<IdentityRole> roleManager, IOptions<JWTData> JWTData, IFIleUploadService fIleUpload)
         {
             _mapper = mapper;
             _userManager = userManager;
             _signInManager = signInManager;
             _roleManager = roleManager;
             _JWTData = JWTData;
+            _fileUpload = fIleUpload;
         }
 
         public async Task<ObjectResult> AddUserAsync(AddUserRequestDto model)
@@ -37,8 +39,14 @@ namespace FastCreditChallenge.Core.Services
             if (await _userManager.FindByEmailAsync(model.Email) != null)
                 return ServiceResponse.BadRequest("Email already exists");
 
+            var imageUrl = await _fileUpload.UploadFile(model.Photo);
+
+            if (string.IsNullOrWhiteSpace(imageUrl.ImageUrl))
+                return ServiceResponse.BadRequest("Image upload failed");
+
             var user = _mapper.Map<User>(model);
 
+            user.Photo = imageUrl.ImageUrl;
             var result = await _userManager.CreateAsync(user, model.Password);
 
             if (result.Succeeded)

@@ -1,0 +1,12 @@
+C:\Users\lilzj\source\repos\FastCreditChallenge\FastCreditChallenge.Entities\bin\Release\net6.0\FastCreditChallenge.Entities.deps.json
+C:\Users\lilzj\source\repos\FastCreditChallenge\FastCreditChallenge.Entities\bin\Release\net6.0\FastCreditChallenge.Entities.dll
+C:\Users\lilzj\source\repos\FastCreditChallenge\FastCreditChallenge.Entities\bin\Release\net6.0\ref\FastCreditChallenge.Entities.dll
+C:\Users\lilzj\source\repos\FastCreditChallenge\FastCreditChallenge.Entities\bin\Release\net6.0\FastCreditChallenge.Entities.pdb
+C:\Users\lilzj\source\repos\FastCreditChallenge\FastCreditChallenge.Entities\obj\Release\net6.0\FastCreditChallenge.Entities.csproj.AssemblyReference.cache
+C:\Users\lilzj\source\repos\FastCreditChallenge\FastCreditChallenge.Entities\obj\Release\net6.0\FastCreditChallenge.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lilzj\source\repos\FastCreditChallenge\FastCreditChallenge.Entities\obj\Release\net6.0\FastCreditChallenge.Entities.AssemblyInfoInputs.cache
+C:\Users\lilzj\source\repos\FastCreditChallenge\FastCreditChallenge.Entities\obj\Release\net6.0\FastCreditChallenge.Entities.AssemblyInfo.cs
+C:\Users\lilzj\source\repos\FastCreditChallenge\FastCreditChallenge.Entities\obj\Release\net6.0\FastCreditChallenge.Entities.csproj.CoreCompileInputs.cache
+C:\Users\lilzj\source\repos\FastCreditChallenge\FastCreditChallenge.Entities\obj\Release\net6.0\FastCreditChallenge.Entities.dll
+C:\Users\lilzj\source\repos\FastCreditChallenge\FastCreditChallenge.Entities\obj\Release\net6.0\ref\FastCreditChallenge.Entities.dll
+C:\Users\lilzj\source\repos\FastCreditChallenge\FastCreditChallenge.Entities\obj\Release\net6.0\FastCreditChallenge.Entities.pdb

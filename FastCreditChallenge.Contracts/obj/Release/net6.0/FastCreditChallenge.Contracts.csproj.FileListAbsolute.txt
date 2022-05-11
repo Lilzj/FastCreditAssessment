@@ -1,0 +1,17 @@
+C:\Users\lilzj\source\repos\FastCreditChallenge\FastCreditChallenge.Contracts\bin\Release\net6.0\FastCreditChallenge.Contracts.deps.json
+C:\Users\lilzj\source\repos\FastCreditChallenge\FastCreditChallenge.Contracts\bin\Release\net6.0\FastCreditChallenge.Contracts.dll
+C:\Users\lilzj\source\repos\FastCreditChallenge\FastCreditChallenge.Contracts\bin\Release\net6.0\ref\FastCreditChallenge.Contracts.dll
+C:\Users\lilzj\source\repos\FastCreditChallenge\FastCreditChallenge.Contracts\bin\Release\net6.0\FastCreditChallenge.Contracts.pdb
+C:\Users\lilzj\source\repos\FastCreditChallenge\FastCreditChallenge.Contracts\bin\Release\net6.0\FastCreditChallenge.Entities.dll
+C:\Users\lilzj\source\repos\FastCreditChallenge\FastCreditChallenge.Contracts\bin\Release\net6.0\FastCreditChallenge.Utilities.dll
+C:\Users\lilzj\source\repos\FastCreditChallenge\FastCreditChallenge.Contracts\bin\Release\net6.0\FastCreditChallenge.Entities.pdb
+C:\Users\lilzj\source\repos\FastCreditChallenge\FastCreditChallenge.Contracts\bin\Release\net6.0\FastCreditChallenge.Utilities.pdb
+C:\Users\lilzj\source\repos\FastCreditChallenge\FastCreditChallenge.Contracts\obj\Release\net6.0\FastCreditChallenge.Contracts.csproj.AssemblyReference.cache
+C:\Users\lilzj\source\repos\FastCreditChallenge\FastCreditChallenge.Contracts\obj\Release\net6.0\FastCreditChallenge.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lilzj\source\repos\FastCreditChallenge\FastCreditChallenge.Contracts\obj\Release\net6.0\FastCreditChallenge.Contracts.AssemblyInfoInputs.cache
+C:\Users\lilzj\source\repos\FastCreditChallenge\FastCreditChallenge.Contracts\obj\Release\net6.0\FastCreditChallenge.Contracts.AssemblyInfo.cs
+C:\Users\lilzj\source\repos\FastCreditChallenge\FastCreditChallenge.Contracts\obj\Release\net6.0\FastCreditChallenge.Contracts.csproj.CoreCompileInputs.cache
+C:\Users\lilzj\source\repos\FastCreditChallenge\FastCreditChallenge.Contracts\obj\Release\net6.0\FastCreditChallenge.Contracts.csproj.CopyComplete
+C:\Users\lilzj\source\repos\FastCreditChallenge\FastCreditChallenge.Contracts\obj\Release\net6.0\FastCreditChallenge.Contracts.dll
+C:\Users\lilzj\source\repos\FastCreditChallenge\FastCreditChallenge.Contracts\obj\Release\net6.0\ref\FastCreditChallenge.Contracts.dll
+C:\Users\lilzj\source\repos\FastCreditChallenge\FastCreditChallenge.Contracts\obj\Release\net6.0\FastCreditChallenge.Contracts.pdb
