@@ -1,0 +1,30 @@
+[
+
+  {
+    "FirstName": "Joshua",
+    "LastName": "Rice",
+    "Gender": 1,
+    "DOB": "1990/01/01",
+    "Nationality": "Nigeria",
+    "email": "josh@gmail.com",
+    "phonenumber": "0(811) 403-2216"
+  },
+  {
+    "FirstName": "Femi",
+    "LastName": "John",
+    "Gender": 0,
+    "DOB": "1991/01/01",
+    "Nationality": "Nigeria",
+    "email": "femi@gmail.com",
+    "phonenumber": "0(811) 403-2216"
+  },
+  {
+    "FirstName": "Sam",
+    "LastName": "Phillip",
+    "Gender": 1,
+    "DOB": "1992/01/01",
+    "Nationality": "Nigeria",
+    "email": "sam@gmail.com",
+    "phonenumber": "0(811) 403-2216"
+  }
+]

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using FastCreditChallenge.Utilities.Dtos.Request;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,9 +11,9 @@ namespace FastCreditChallenge.Contracts.Services
     public interface IUserService
     {
         Task<ObjectResult> GetCustomersAsync();
-        Task<ObjectResult> AddCustomerAsync(CustomerToAddDto model);
+        Task<ObjectResult> AddCustomerAsync(AddUserRequestDto model);
         Task<ObjectResult> GetCustomerWIthOrdersAsync(long customerId);
-        Task<IActionResult> UpdateCustomerAsync(long customerId, CustomerToUpdateDto model);
+        Task<IActionResult> UpdateCustomerAsync(long customerId, UpdateUserRequestDto model);
         Task<IActionResult> DeleteCustomerAsync(long customerId);
         Task<ObjectResult> GetCustomersByName(string name);
     }

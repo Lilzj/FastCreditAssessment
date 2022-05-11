@@ -1,3 +1,12 @@
+using FastCreditChallenge.Contracts.Repositories;
+using FastCreditChallenge.Contracts.Services;
+using FastCreditChallenge.Core.Services;
+using FastCreditChallenge.Data;
+using FastCreditChallenge.Data.Repositories;
+using FastCreditChallenge.Entities;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -6,6 +15,18 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddIdentity<User, IdentityRole>()
+    .AddEntityFrameworkStores<FastCreditContext>().AddDefaultTokenProviders();
+builder.Services.AddDbContextPool<FastCreditContext>(opt =>
+    opt.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+builder.Services.AddScoped<IRepositoryManager, RepositoryManager>();
+builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddCors(options => {
+    options.AddPolicy("CorsPolicy", builder =>
+        builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader()
+    );
+});
 
 var app = builder.Build();
 

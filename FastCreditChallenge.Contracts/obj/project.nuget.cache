@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "VE6tKtng0jRu8E+/5fNFGJyOj35+1iR9D4dde2IBs2iEFQLBH2MT6P2L70qiPZRkj6TbnQofyLHtRJ63reteGg==",
+  "dgSpecHash": "9TIqYLocYZb1lN6BOqdSZ18qmroteJrCkCTepMOsN/2sKncvmBX/TXI2Z0gxwdVK5IBFQcY2YM7jQfSS0Q0j6w==",
   "success": true,
   "projectFilePath": "C:\\Users\\lilzj\\source\\repos\\FastCreditChallenge\\FastCreditChallenge.Contracts\\FastCreditChallenge.Contracts.csproj",
   "expectedPackageFiles": [
@@ -15,7 +15,7 @@
     "C:\\Users\\lilzj\\.nuget\\packages\\microsoft.aspnetcore.http\\2.2.0\\microsoft.aspnetcore.http.2.2.0.nupkg.sha512",
     "C:\\Users\\lilzj\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\lilzj\\.nuget\\packages\\microsoft.aspnetcore.http.extensions\\2.2.0\\microsoft.aspnetcore.http.extensions.2.2.0.nupkg.sha512",
-    "C:\\Users\\lilzj\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
+    "C:\\Users\\lilzj\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
     "C:\\Users\\lilzj\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\6.0.4\\microsoft.aspnetcore.identity.entityframeworkcore.6.0.4.nupkg.sha512",
     "C:\\Users\\lilzj\\.nuget\\packages\\microsoft.aspnetcore.mvc.abstractions\\2.2.0\\microsoft.aspnetcore.mvc.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\lilzj\\.nuget\\packages\\microsoft.aspnetcore.mvc.core\\2.2.5\\microsoft.aspnetcore.mvc.core.2.2.5.nupkg.sha512",
@@ -61,6 +61,7 @@
     "C:\\Users\\lilzj\\.nuget\\packages\\system.io\\4.1.0\\system.io.4.1.0.nupkg.sha512",
     "C:\\Users\\lilzj\\.nuget\\packages\\system.io.filesystem\\4.0.1\\system.io.filesystem.4.0.1.nupkg.sha512",
     "C:\\Users\\lilzj\\.nuget\\packages\\system.io.filesystem.primitives\\4.0.1\\system.io.filesystem.primitives.4.0.1.nupkg.sha512",
+    "C:\\Users\\lilzj\\.nuget\\packages\\system.io.pipelines\\5.0.2\\system.io.pipelines.5.0.2.nupkg.sha512",
     "C:\\Users\\lilzj\\.nuget\\packages\\system.linq\\4.1.0\\system.linq.4.1.0.nupkg.sha512",
     "C:\\Users\\lilzj\\.nuget\\packages\\system.linq.expressions\\4.1.0\\system.linq.expressions.4.1.0.nupkg.sha512",
     "C:\\Users\\lilzj\\.nuget\\packages\\system.objectmodel\\4.0.12\\system.objectmodel.4.0.12.nupkg.sha512",
